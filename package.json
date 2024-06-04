@@ -1,0 +1,20 @@
+{
+  "name": "relia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "openai": "^4.47.3",
+    "zora": "^5.2.0",
+    "zora-reporters": "^1.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
