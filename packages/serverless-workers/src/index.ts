@@ -1,4 +1,4 @@
-import { runTests } from 'relia';
+import { runTests } from '@relia/core';
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {

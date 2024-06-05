@@ -1,5 +1,5 @@
 {
-  "name": "workers",
+  "name": "@relia/workers",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,6 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "relia": "^0.1.3"
+    "@relia/core": "*"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "name": "@relia/core",
+  "version": "0.1.3",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "yanzhen@smartx.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "openai": "^4.47.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
