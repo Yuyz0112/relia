@@ -1,13 +1,13 @@
 {
-  "name": "@relia/workers",
+  "name": "@relia/serverless",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "test": "vitest",
-    "cf-typegen": "wrangler types"
+    "workers:deploy": "wrangler deploy",
+    "workers:dev": "wrangler dev",
+    "workers:start": "wrangler dev",
+    "workers:test": "vitest",
+    "workers:typegen": "wrangler types"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.1.0",
