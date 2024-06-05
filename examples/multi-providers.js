@@ -18,17 +18,10 @@ runTests({
     },
     {
       name: 'groq',
-      model: 'llama3-70b',
+      model: 'llama3-70b-8192',
       temperature: 0.1,
       baseURL: 'https://api.groq.com/openai/v1',
       apiKey: process.env.GROQ_API_KEY
-    },
-    {
-      name: 'anthropic',
-      model: 'claude-3-sonnet-20240229',
-      temperature: 0.1,
-      baseURL: 'https://api.anthropic.com/v1',
-      apiKey: process.env.ANTHROPIC_API_KEY
     }
   ],
   suites: [

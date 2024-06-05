@@ -5,7 +5,7 @@ runTests({
     name: "openAI",
     model,
     temperature: 0.1,
-    baseURL: 'https://api.openai.com/v1',
+    baseURL: "https://clear-robin-12.deno.dev/v1" || 'https://api.openai.com/v1',
     apiKey: process.env.OPENAI_API_KEY,
   })),
   suites: [

@@ -31,3 +31,37 @@ export type Tool = OpenAI.ChatCompletionTool;
 export type Reporter = {
   mode: "json" | "diff";
 };
+
+interface IMessage<T> {
+  type: string;
+  data: T;
+}
+
+interface INewTestMessage extends IMessage<INewTestMessageInput> {
+  type: "TEST_START";
+}
+
+interface ITestEndMessage extends IMessage<ITestEndMessageInput> {
+  type: "TEST_END";
+}
+
+interface IErrorMessage extends IMessage<{ error: unknown }> {
+  type: "ERROR";
+}
+
+export type TestMessage = IErrorMessage | ITestEndMessage | INewTestMessage;
+
+interface INewTestMessageInput {
+  description: string;
+}
+
+interface ITestEndMessageInput {
+  description: string;
+  executionTime: number;
+  pass: boolean;
+}
+
+export type TestOpts = Partial<{
+  timeout: number;
+  reporter?: (message: TestMessage) => void;
+}>;

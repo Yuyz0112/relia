@@ -6,7 +6,6 @@ export const createClient = (provider: Provider) => {
     case "openAI":
     case "fireworks":
     case "groq":
-    case "anthropic":
     default:
       return new OpenAI({
         baseURL: provider.baseURL,

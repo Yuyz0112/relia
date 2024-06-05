@@ -1,18 +1,12 @@
-import { test, hold, report } from "zora";
-import {
-  createJSONReporter,
-  Message as TestMessage,
-  createDiffReporter,
-} from "zora-reporters";
+import { ok, deepEqual } from "node:assert";
 import { createClient } from "./client";
-import { TestPlan } from "./types";
+import { TestPlan, TestMessage } from "./types";
+import { createJSONReporter, test } from "./runner";
 
 export * from "./types";
 
 export async function runTests(testPlan: TestPlan) {
   const { providers, suites, tools, round } = testPlan;
-
-  hold();
 
   const results: TestMessage[] = [];
 
@@ -24,16 +18,16 @@ export async function runTests(testPlan: TestPlan) {
             results.push(JSON.parse(raw));
           },
         })
-      : createDiffReporter();
+      : createJSONReporter();
 
   for (const provider of providers) {
     const client = createClient(provider);
 
     for (const [index, suite] of suites.entries()) {
       for (let currentRound = 1; currentRound <= round; currentRound++) {
-        test(
+        await test(
           `provider ${provider.name}, model ${provider.model}, suite ${index}, round ${round}`,
-          async (t) => {
+          async () => {
             const chatCompletion = await client.chat.completions.create({
               model: provider.model,
               temperature: provider.temperature,
@@ -42,8 +36,8 @@ export async function runTests(testPlan: TestPlan) {
             });
 
             const { tool_calls } = chatCompletion.choices[0].message;
-            t.ok(tool_calls?.length, `have tool calls`);
-            t.deepEqual(
+            ok(tool_calls?.length, `have tool calls`);
+            deepEqual(
               {
                 name: tool_calls![0].function.name,
                 arguments: JSON.parse(tool_calls![0].function.arguments),
@@ -52,14 +46,12 @@ export async function runTests(testPlan: TestPlan) {
             );
           },
           {
-            timeout: 120_000,
+            reporter,
           }
         );
       }
     }
   }
-
-  await report({ reporter });
 
   if (reporterMode === "json") {
     return results;
