@@ -4,7 +4,8 @@ export type TestPlan = {
   providers: Provider[];
   suites: Suite[];
   tools: Tool[];
-  round: number;
+  round?: number;
+  concurrency?: number;
   reporter?: Reporter;
 };
 
@@ -20,6 +21,8 @@ export type Suite = OpenAICompatibleSuite;
 
 export type OpenAICompatibleSuite = {
   messages: OpenAI.ChatCompletionMessageParam[];
+  // suite-level temperature
+  temperature?: number;
   result: {
     name: string;
     arguments: unknown;

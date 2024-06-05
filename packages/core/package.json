@@ -15,7 +15,8 @@
   "author": "yanzhen@smartx.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "openai": "^4.47.3"
+    "openai": "^4.47.3",
+    "p-map": "^7.0.2"
   },
   "devDependencies": {
     "typescript": "^5.4.5"

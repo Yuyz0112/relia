@@ -6,7 +6,7 @@ runTests({
       name: "openAI",
       model: 'gpt-3.5-turbo',
       temperature: 0.1,
-      baseURL: "https://clear-robin-12.deno.dev/v1" || 'https://api.openai.com/v1',
+      baseURL: 'https://api.openai.com/v1',
       apiKey: process.env.OPENAI_API_KEY,
     },
     {
