@@ -1,8 +1,8 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "relia-workers"
-main = "src/index.tsx"
+name = "relia-pages"
 compatibility_date = "2024-06-03"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "./dist"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure

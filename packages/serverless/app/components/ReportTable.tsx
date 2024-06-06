@@ -15,7 +15,6 @@ export default function ReportTable({ messages }: Props) {
 					<th>Suite</th>
 					<th>Round</th>
 					<th>Result</th>
-					<th>Duration</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,7 +38,6 @@ export default function ReportTable({ messages }: Props) {
 										<div>{round.pass ? 'Success' : 'Failure'}</div>
 										<ErrorText error={round.error} labelFor={labelFor} />
 									</td>
-									<td class="align-right">{round.executionTime}ms</td>
 								</>
 							);
 

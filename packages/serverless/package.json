@@ -1,8 +1,13 @@
 {
   "name": "@relia/serverless",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "npm run build && wrangler pages deploy",
     "workers:deploy": "wrangler deploy",
     "workers:dev": "wrangler dev",
     "workers:start": "wrangler dev",
@@ -12,6 +17,8 @@
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.1.0",
     "@cloudflare/workers-types": "^4.20240603.0",
+    "@hono/vite-cloudflare-pages": "^0.4.0",
+    "@hono/vite-dev-server": "^0.12.1",
     "@types/diff": "^5.2.1",
     "typescript": "^5.0.4",
     "vitest": "1.3.0",
@@ -20,6 +27,7 @@
   "dependencies": {
     "@relia/core": "*",
     "diff": "^5.2.0",
-    "hono": "^4.4.3"
+    "hono": "^4.4.3",
+    "honox": "^0.1.20"
   }
 }

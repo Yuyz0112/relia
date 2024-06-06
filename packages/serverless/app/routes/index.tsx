@@ -1,67 +1,10 @@
-import { Hono } from 'hono';
-import type { FC } from 'hono/jsx';
-import { Style, css } from 'hono/css';
+import { createRoute } from 'honox/factory';
 import { ITestEndMessage, runTests, TestMessage } from '@relia/core';
-import ReportTable from './ReportTable';
+import ReportTable from '../components/ReportTable';
 
-const app = new Hono<{ Bindings: Env }>();
+import Counter from '../islands/counter';
 
-const Layout: FC = (props) => {
-	return (
-		<html>
-			<head>
-				<meta charset="UTF-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>Relia Test Report</title>
-				<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
-				<Style>{css`
-					.error-info {
-						display: none;
-						white-space: pre-wrap;
-						margin-top: 4px;
-						padding: 2px;
-					}
-					.error-cell {
-						position: relative;
-					}
-					.error-cell label {
-						cursor: pointer;
-					}
-					.error-checkbox {
-						display: none;
-					}
-					.error-checkbox:checked + .error-info {
-						display: block;
-					}
-					.align-right {
-						text-align: right;
-					}
-					.bg-success {
-						background-color: rgb(220 252 231);
-					}
-					.bg-error {
-						background-color: rgb(254 226 226);
-					}
-					.bg-diff-add {
-						background-color: rgb(248 113 113);
-					}
-					.bg-diff-remove {
-						background-color: rgb(74 222 128);
-					}
-					.break-all {
-						word-break: break-all;
-					}
-					.text-italic {
-						font-style: italic;
-					}
-				`}</Style>
-			</head>
-			<body class="container">{props.children}</body>
-		</html>
-	);
-};
-
-app.get('/', async (c) => {
+export default createRoute(async (c) => {
 	let messages = [
 		{
 			type: 'TEST_START',
@@ -1417,13 +1360,15 @@ app.get('/', async (c) => {
 	// 	},
 	// })) as any;
 
-	return c.html(
-		<Layout>
+	return c.render(
+		<div class="container">
+			<Counter />
 			<h1>Relia Test Report</h1>
 			<ReportTable messages={(messages || []).filter((m) => m.type === 'TEST_END') as ITestEndMessage[]} />
 			<pre>{JSON.stringify(messages, null, 2)}</pre>
-		</Layout>
+		</div>,
+		{
+			title: 'Relia!',
+		}
 	);
 });
-
-export default app;
