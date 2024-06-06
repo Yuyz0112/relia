@@ -5,4 +5,5 @@ interface Env {
 	FIREWORKS_API_KEY: string;
 	GROQ_API_KEY: string;
 	ANTHROPIC_API_KEY: string;
+	[x: string]: string | undefined;
 }

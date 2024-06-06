@@ -12,11 +12,14 @@
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.1.0",
     "@cloudflare/workers-types": "^4.20240603.0",
+    "@types/diff": "^5.2.1",
     "typescript": "^5.0.4",
     "vitest": "1.3.0",
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@relia/core": "*"
+    "@relia/core": "*",
+    "diff": "^5.2.0",
+    "hono": "^4.4.3"
   }
 }

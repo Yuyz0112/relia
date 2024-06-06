@@ -444,6 +444,11 @@
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
+"@types/diff@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.npmjs.org/@types/diff/-/diff-5.2.1.tgz#cceae9c4b2dae5c6b8ab1ce1263601c255d87fb3"
+  integrity sha512-uxpcuwWJGhe2AR1g8hD9F5OYGCqjqWnBUQFD8gMZsDbv8oPHzxJF6iMO6n8Tk0AdzlxoaaoQhOYlIg/PukVU8g==
+
 "@types/estree@1.0.5", "@types/estree@^1.0.0":
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.5.tgz#a6ce3e556e00fd9895dd872dd172ad0d4bd687f4"
@@ -733,6 +738,11 @@ diff-sequences@^29.6.3:
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"
   integrity sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==
 
+diff@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/diff/-/diff-5.2.0.tgz#26ded047cd1179b78b9537d5ef725503ce1ae531"
+  integrity sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==
+
 esbuild@0.17.19:
   version "0.17.19"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.17.19.tgz#087a727e98299f0462a3d0bcdd9cd7ff100bd955"
@@ -923,6 +933,11 @@ hasown@^2.0.0:
   integrity sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==
   dependencies:
     function-bind "^1.1.2"
+
+hono@^4.4.3:
+  version "4.4.3"
+  resolved "https://registry.npmjs.org/hono/-/hono-4.4.3.tgz#50cf90e8f227d26f1244c3ce0b276e225474f866"
+  integrity sha512-G7rTruKzrHXPz1KB4B50deKydPA9+aeei+WC1hikP0abN9N+a6yORuweageaqWocYfYNkpoqA5ezGV2mzQasvw==
 
 human-signals@^5.0.0:
   version "5.0.0"

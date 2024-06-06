@@ -38,21 +38,18 @@ export type Reporter = {
 interface IMessage<T> {
   type: string;
   data: T;
+  meta?: Record<string, unknown>;
 }
 
-interface INewTestMessage extends IMessage<INewTestMessageInput> {
+export interface INewTestMessage extends IMessage<INewTestMessageInput> {
   type: "TEST_START";
 }
 
-interface ITestEndMessage extends IMessage<ITestEndMessageInput> {
+export interface ITestEndMessage extends IMessage<ITestEndMessageInput> {
   type: "TEST_END";
 }
 
-interface IErrorMessage extends IMessage<{ error: unknown }> {
-  type: "ERROR";
-}
-
-export type TestMessage = IErrorMessage | ITestEndMessage | INewTestMessage;
+export type TestMessage = ITestEndMessage | INewTestMessage;
 
 interface INewTestMessageInput {
   description: string;
@@ -62,9 +59,11 @@ interface ITestEndMessageInput {
   description: string;
   executionTime: number;
   pass: boolean;
+  error?: unknown;
 }
 
 export type TestOpts = Partial<{
   timeout: number;
   reporter?: (message: TestMessage) => void;
+  meta?: IMessage<unknown>["meta"];
 }>;

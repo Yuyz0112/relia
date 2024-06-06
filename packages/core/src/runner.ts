@@ -16,16 +16,17 @@ export const test = async (
   fn: () => Promise<void>,
   opts?: TestOpts
 ): Promise<void> => {
-  const { timeout = DEFAULT_TIMEOUT, reporter = () => {} } = opts || {};
+  const { timeout = DEFAULT_TIMEOUT, reporter = () => {}, meta } = opts || {};
 
   let timeoutId;
   const start = Date.now();
-  let pass = true;
+  let error: unknown;
 
   try {
     reporter({
       type: "TEST_START",
       data: { description },
+      meta,
     });
 
     await Promise.race([
@@ -37,16 +38,18 @@ export const test = async (
       }),
     ]);
     clearTimeout(timeoutId);
-  } catch (error) {
-    pass = false;
-    reporter({
-      type: "ERROR",
-      data: { error },
-    });
+  } catch (caughtError) {
+    error = caughtError;
   } finally {
     reporter({
       type: "TEST_END",
-      data: { description, executionTime: Date.now() - start, pass },
+      data: {
+        description,
+        executionTime: Date.now() - start,
+        pass: !error,
+        error,
+      },
+      meta,
     });
   }
 };

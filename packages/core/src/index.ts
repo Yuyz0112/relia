@@ -56,6 +56,14 @@ export async function runTests(testPlan: TestPlan) {
             },
             {
               reporter,
+              meta: {
+                provider: {
+                  name: provider.name,
+                  model: provider.model,
+                },
+                suite: index,
+                round: currentRound,
+              },
             }
           )
         );
