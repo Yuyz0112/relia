@@ -18,13 +18,13 @@ export default function ReportTable({ messages }: Props) {
 				</tr>
 			</thead>
 			<tbody>
-				{Object.keys(group).map((key) => {
+				{Object.keys(group).flatMap((key) => {
 					const { suites, model, name: provider } = group[key];
 					const total = suites.reduce((acc, suite) => acc + suite.rounds.length, 0);
 					const totalPass = suites.reduce((acc, suite) => acc + suite.passCount, 0);
 					const successRate = (totalPass / total) * 100;
 
-					return suites.map((suite, suiteIndex) => {
+					return suites.flatMap((suite, suiteIndex) => {
 						const { rounds } = suite;
 						const totalRound = rounds.length;
 						rounds.sort((a, b) => a.round - b.round);
@@ -98,14 +98,14 @@ function groupByProvider(results: ITestEndMessage[]) {
 	> = {};
 
 	results.forEach((result) => {
-		const { provider, suite, round } = result.meta as unknown as {
+		const { provider, suite, round, key } = result.meta as unknown as {
+			key: string;
 			provider: Pick<TestPlan['providers'][0], 'name' | 'model'>;
 			suite: number;
 			round: number;
 		};
 		const { pass, executionTime, error } = result.data;
 
-		const key = provider.name + '-' + provider.model;
 		if (!providers[key]) {
 			providers[key] = { name: provider.name, model: provider.model, suites: [] };
 		}

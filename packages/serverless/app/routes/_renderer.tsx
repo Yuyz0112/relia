@@ -1,8 +1,9 @@
 import { jsxRenderer } from 'hono/jsx-renderer';
 import { Script } from 'honox/server';
 import { Style, css } from 'hono/css';
+import Navigation from '../components/Navigation';
 
-export default jsxRenderer(({ children, title }) => {
+export default jsxRenderer(({ children, title, ...rest }) => {
 	return (
 		<html lang="en">
 			<head>
@@ -11,6 +12,18 @@ export default jsxRenderer(({ children, title }) => {
 				{title ? <title>{title}</title> : <></>}
 				<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
 				<Style>{css`
+					body {
+						background-color: rgba(245, 245, 245, 0.6);
+						opacity: 1;
+						background-image: linear-gradient(rgba(26, 149, 224, 0.1) 1px, transparent 1px),
+							linear-gradient(to right, rgba(26, 149, 224, 0.1) 1px, rgba(245, 245, 245, 0.6) 1px);
+						background-size: 40px 40px;
+					}
+
+					.container {
+						max-width: 80rem;
+					}
+
 					.error-info {
 						display: none;
 						white-space: pre-wrap;
@@ -50,10 +63,19 @@ export default jsxRenderer(({ children, title }) => {
 					.text-italic {
 						font-style: italic;
 					}
+					.flex {
+						display: flex;
+					}
+					.justify-end {
+						justify-content: flex-end;
+					}
 				`}</Style>
 				<Script src="/app/client.ts" />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Navigation />
+				{children}
+			</body>
 		</html>
 	);
 });
