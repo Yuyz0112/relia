@@ -24,7 +24,7 @@ export async function runTests(testPlan: TestPlan) {
   });
 
   const tasks: Promise<void>[] = [];
-  for (const provider of providers) {
+  for (const [providerIndex, provider] of providers.entries()) {
     const client = createClient(provider);
 
     for (const [index, suite] of suites.entries()) {
@@ -53,6 +53,7 @@ export async function runTests(testPlan: TestPlan) {
             {
               reporter,
               meta: {
+                key: providerIndex,
                 provider: {
                   name: provider.name,
                   model: provider.model,

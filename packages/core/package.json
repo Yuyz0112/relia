@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "type": "commonjs",
   "scripts": {
-    "build": "tsc",
+    "build": "node scripts/build.js",
     "prepublish": "npm run build"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "p-map": "^7.0.2"
   },
   "devDependencies": {
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5"
   }
 }
