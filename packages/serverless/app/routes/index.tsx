@@ -1355,9 +1355,6 @@ export default createRoute(async (c) => {
 	// 		},
 	// 	],
 	// 	round: 4,
-	// 	reporter: {
-	// 		mode: 'json',
-	// 	},
 	// })) as any;
 
 	return c.render(

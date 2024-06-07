@@ -66,4 +66,7 @@ runTests({
     },
   ],
   round: 2,
+}).then(results => {
+  // handle JSON results
+  console.log(results)
 });

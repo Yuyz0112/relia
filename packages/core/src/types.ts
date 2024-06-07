@@ -32,7 +32,7 @@ export type OpenAICompatibleSuite = {
 export type Tool = OpenAI.ChatCompletionTool;
 
 export type Reporter = {
-  mode: "json" | "diff";
+  mode: "json";
 };
 
 interface IMessage<T> {

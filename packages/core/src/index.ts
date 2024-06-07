@@ -17,15 +17,11 @@ export async function runTests(testPlan: TestPlan) {
 
   const results: TestMessage[] = [];
 
-  const reporterMode = testPlan.reporter?.mode ?? "diff";
-  const reporter =
-    reporterMode === "json"
-      ? createJSONReporter({
-          log(raw) {
-            results.push(JSON.parse(raw));
-          },
-        })
-      : createJSONReporter();
+  const reporter = createJSONReporter({
+    log(raw) {
+      results.push(JSON.parse(raw));
+    },
+  });
 
   const tasks: Promise<void>[] = [];
   for (const provider of providers) {
@@ -73,7 +69,5 @@ export async function runTests(testPlan: TestPlan) {
 
   await pMap(tasks, (t) => t, { concurrency });
 
-  if (reporterMode === "json") {
-    return results;
-  }
+  return results;
 }
