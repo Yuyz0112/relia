@@ -57,7 +57,7 @@ export default function ReportTable({ messages, reportId = 'default' }: Props) {
 											</td>
 											<td rowspan={total} width="150px">
 												<div>{successRate.toFixed(2)}%</div>
-												<div className="progress-bar" style={{ width: 130, marginLeft: 5, backgroundColor: 'rgb(248 113 113)' }}>
+												<div className="progress-bar" style={{ marginLeft: 5, backgroundColor: 'rgb(248 113 113)' }}>
 													<div
 														className="progress-bar-filled"
 														style={{ width: `${successRate}%`, backgroundColor: 'rgb(74 222 128)' }}

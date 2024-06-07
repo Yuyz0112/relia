@@ -2,8 +2,8 @@ import * as Diff from 'diff';
 import { css, cx } from 'hono/css';
 
 const errorBtn = css`
-	margin-left: 0.5rem;
-	padding: 0.25rem;
+	margin-left: 0.25rem;
+	padding: 0.125rem;
 `;
 
 type Props = {
