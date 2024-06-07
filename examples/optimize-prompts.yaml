@@ -1,0 +1,42 @@
+providers:
+  - name: openAI
+    model: gpt-3.5-turbo
+    baseURL: https://api.openai.com/v1
+    apiKey: $OPENAI_API_KEY
+suites:
+  - name: Simple Prompt
+    messages:
+      - role: assistant
+        content: Hello, please provide the product name to get the price.
+      - role: user
+        content: I want to know the price of an apple phone?
+    result:
+      name: get_product_price
+      arguments:
+        product_name: iPhone
+  - name: With System Prompt
+    messages:
+      - role: system
+        content: Valid product names are iPhone, MacBook, and iPad.
+      - role: assistant
+        content: Hello, please provide the product name to get the price.
+      - role: user
+        content: I want to know the price of an apple phone?
+    result:
+      name: get_product_price
+      arguments:
+        product_name: iPhone
+tools:
+  - type: function
+    function:
+      name: get_product_price
+      description: Get a product price
+      parameters:
+        type: object
+        properties:
+          product_name:
+            type: string
+            description: The product name to get the price for
+        required:
+          - product_name
+round: 2

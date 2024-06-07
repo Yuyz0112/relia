@@ -1,0 +1,104 @@
+[
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-3.5-turbo, suite 0, round 2",
+      "executionTime": 769,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "get_product_price",
+          "arguments": {
+            "product_name": "apple phone"
+          }
+        },
+        "expected": {
+          "name": "get_product_price",
+          "arguments": {
+            "product_name": "iPhone"
+          }
+        },
+        "operator": "deepStrictEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-3.5-turbo"
+      },
+      "suite": 0,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-3.5-turbo, suite 0, round 2",
+      "executionTime": 800,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "get_product_price",
+          "arguments": {
+            "product_name": "Apple Phone"
+          }
+        },
+        "expected": {
+          "name": "get_product_price",
+          "arguments": {
+            "product_name": "iPhone"
+          }
+        },
+        "operator": "deepStrictEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-3.5-turbo"
+      },
+      "suite": 0,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-3.5-turbo, suite 1, round 2",
+      "executionTime": 846,
+      "pass": true
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-3.5-turbo"
+      },
+      "suite": 1,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-3.5-turbo, suite 1, round 2",
+      "executionTime": 893,
+      "pass": true
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-3.5-turbo"
+      },
+      "suite": 1,
+      "round": 2
+    }
+  }
+]

@@ -1,0 +1,1148 @@
+[
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 1, round 4",
+      "executionTime": 3674,
+      "pass": true
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 1,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 1, round 4",
+      "executionTime": 3768,
+      "pass": true
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 1,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 1, round 4",
+      "executionTime": 3926,
+      "pass": true
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 1,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 1, round 4",
+      "executionTime": 4363,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 1,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 0, round 4",
+      "executionTime": 4381,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 0,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 1, round 4",
+      "executionTime": 4474,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 1,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 0, round 4",
+      "executionTime": 4678,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 0,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 0, round 4",
+      "executionTime": 4817,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 0,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 1, round 4",
+      "executionTime": 4871,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 1,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 1, round 4",
+      "executionTime": 4896,
+      "pass": true
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 1,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 1, round 4",
+      "executionTime": 4918,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 1,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 1, round 4",
+      "executionTime": 5117,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "Mechanical Engineering",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 1,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 1, round 4",
+      "executionTime": 5119,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "Mechanical Engineering",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 1,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 0, round 4",
+      "executionTime": 5145,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": " ",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 0,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 1, round 4",
+      "executionTime": 5211,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "unknown",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "UC Berkeley",
+                "degree": "Bachelor's",
+                "field": "Mechanical Engineering",
+                "year": 2010
+              },
+              {
+                "institution": "Caltech",
+                "degree": "PhD",
+                "field": "Mechanical Engineering",
+                "year": 2015
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 1,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0125-preview, suite 0, round 4",
+      "executionTime": 5296,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 2,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0125-preview"
+      },
+      "suite": 0,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 1, round 4",
+      "executionTime": 5297,
+      "pass": true
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 1,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 1, round 4",
+      "executionTime": 5327,
+      "pass": true
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 1,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 0, round 4",
+      "executionTime": 5514,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 0,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 1, round 4",
+      "executionTime": 5524,
+      "pass": true
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 1,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 0, round 4",
+      "executionTime": 5906,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 0,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 0, round 4",
+      "executionTime": 6020,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 0,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 0, round 4",
+      "executionTime": 6051,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 0,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 0, round 4",
+      "executionTime": 6181,
+      "pass": true
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 0,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 1, round 4",
+      "executionTime": 6223,
+      "pass": true
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 1,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 0, round 4",
+      "executionTime": 6243,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 0,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-0613, suite 0, round 4",
+      "executionTime": 6264,
+      "pass": true
+    },
+    "meta": {
+      "key": 0,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-0613"
+      },
+      "suite": 0,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 0, round 4",
+      "executionTime": 6389,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 0,
+      "round": 4
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 0, round 4",
+      "executionTime": 6408,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 0,
+      "round": 1
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 0, round 4",
+      "executionTime": 6440,
+      "pass": false,
+      "error": {
+        "generatedMessage": true,
+        "code": "ERR_ASSERTION",
+        "actual": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "unspecified",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "expected": {
+          "name": "extract_education_info",
+          "arguments": {
+            "education": [
+              {
+                "institution": "Stanford University",
+                "degree": "Bachelor's",
+                "field": "Computer Science",
+                "year": 2015
+              },
+              {
+                "institution": "MIT",
+                "degree": "Master's",
+                "field": "Computer Science",
+                "year": 2018
+              }
+            ]
+          }
+        },
+        "operator": "deepEqual"
+      }
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 0,
+      "round": 3
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-turbo-2024-04-09, suite 0, round 4",
+      "executionTime": 6726,
+      "pass": true
+    },
+    "meta": {
+      "key": 3,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-turbo-2024-04-09"
+      },
+      "suite": 0,
+      "round": 2
+    }
+  },
+  {
+    "type": "TEST_END",
+    "data": {
+      "description": "provider openAI, model gpt-4-1106-preview, suite 1, round 4",
+      "executionTime": 6964,
+      "pass": true
+    },
+    "meta": {
+      "key": 1,
+      "provider": {
+        "name": "openAI",
+        "model": "gpt-4-1106-preview"
+      },
+      "suite": 1,
+      "round": 1
+    }
+  }
+]

@@ -3,7 +3,7 @@ import { useState } from 'hono/jsx';
 import ReportTable from '../components/ReportTable';
 import { css, cx } from 'hono/css';
 import basicYaml from '../../../../examples/basic.yaml?raw';
-import exampleResult from './example-result.json';
+import exampleResult from '../reports/example.json';
 
 const tryBtn = css`
 	margin-top: 1rem;
@@ -13,20 +13,29 @@ const tryBtn = css`
 export default function CreateForm() {
 	const [yamlPlan, setYamlPlan] = useState('');
 	const [messages, setMessages] = useState<ITestEndMessage[] | null>(null);
+	const [submitting, setSubmitting] = useState(false);
 
 	const handleSubmit = async () => {
-		if (yamlPlan.trim() === basicYaml.trim()) {
-			setMessages(exampleResult.filter((m) => m.type === 'TEST_END') as ITestEndMessage[]);
+		if (submitting) {
 			return;
 		}
+		try {
+			setSubmitting(true);
+			if (yamlPlan.trim() === basicYaml.trim()) {
+				setMessages(exampleResult.filter((m) => m.type === 'TEST_END') as ITestEndMessage[]);
+				return;
+			}
 
-		const response = await fetch('/api/reports', {
-			method: 'POST',
-			body: JSON.stringify({ yamlPlan }),
-		});
-		const messages = await response.json();
+			const response = await fetch('/api/reports', {
+				method: 'POST',
+				body: JSON.stringify({ yamlPlan }),
+			});
+			const messages = await response.json();
 
-		setMessages((messages as TestMessage[]).filter((m) => m.type === 'TEST_END') as ITestEndMessage[]);
+			setMessages((messages as TestMessage[]).filter((m) => m.type === 'TEST_END') as ITestEndMessage[]);
+		} finally {
+			setSubmitting(false);
+		}
 	};
 
 	if (messages) {
@@ -35,11 +44,10 @@ export default function CreateForm() {
 				<button
 					class={cx('btn btn-default btn-ghost', tryBtn)}
 					onClick={() => {
-						setYamlPlan('');
 						setMessages(null);
 					}}
 				>
-					try again
+					edit test plan
 				</button>
 				<ReportTable messages={messages} />
 			</div>
@@ -83,8 +91,16 @@ export default function CreateForm() {
 				</div>
 
 				<div class="form-group flex justify-end">
-					<button class="btn btn-default" type="submit" role="button" name="submit" id="submit" onClick={handleSubmit}>
-						Submit
+					<button
+						class="btn btn-default"
+						type="submit"
+						role="button"
+						name="submit"
+						id="submit"
+						onClick={handleSubmit}
+						disabled={submitting}
+					>
+						{submitting ? '...' : 'Submit'}
 					</button>
 				</div>
 			</fieldset>

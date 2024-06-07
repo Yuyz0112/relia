@@ -1,9 +1,9 @@
 import type { ITestEndMessage, TestPlan } from '@relia/core';
 import ErrorText from './ErrorText';
 
-type Props = { messages: ITestEndMessage[] };
+export type Props = { messages: ITestEndMessage[]; reportId?: string };
 
-export default function ReportTable({ messages }: Props) {
+export default function ReportTable({ messages, reportId = 'default' }: Props) {
 	const group = groupByProvider(messages);
 
 	return (
@@ -30,13 +30,15 @@ export default function ReportTable({ messages }: Props) {
 						rounds.sort((a, b) => a.round - b.round);
 
 						return rounds.map((round) => {
-							const labelFor = `${provider}-${suiteIndex}-${round.round}`;
+							const labelFor = `${reportId}-${key}-${suiteIndex}-${round.round}`;
 							const sharedTds = (
 								<>
 									<td class="align-right">{round.round}</td>
-									<td class={`${round.pass ? 'bg-success' : 'bg-error'} error-cell`}>
-										<div>{round.pass ? 'Success' : 'Failure'}</div>
-										<ErrorText error={round.error} labelFor={labelFor} />
+									<td class={`${round.pass ? 'bg-success' : 'bg-error'} error-cell`} width={350}>
+										<div>
+											{round.pass ? 'Success' : 'Failure'}
+											<ErrorText error={round.error} labelFor={labelFor} />
+										</div>
 									</td>
 								</>
 							);

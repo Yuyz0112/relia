@@ -28,6 +28,7 @@
   "dependencies": {
     "@relia/core": "*",
     "diff": "^5.2.0",
+    "highlight.js": "^11.9.0",
     "hono": "^4.4.3",
     "honox": "^0.1.20",
     "js-yaml": "^4.1.0"

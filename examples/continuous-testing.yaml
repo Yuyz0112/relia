@@ -1,0 +1,89 @@
+providers:
+  - name: openAI
+    model: gpt-4-0613
+    baseURL: https://api.openai.com/v1
+    apiKey: $OPENAI_API_KEY
+  - name: openAI
+    model: gpt-4-1106-preview
+    baseURL: https://api.openai.com/v1
+    apiKey: $OPENAI_API_KEY
+  - name: openAI
+    model: gpt-4-0125-preview
+    baseURL: https://api.openai.com/v1
+    apiKey: $OPENAI_API_KEY
+  - name: openAI
+    model: gpt-4-turbo-2024-04-09
+    baseURL: https://api.openai.com/v1
+    apiKey: $OPENAI_API_KEY
+suites:
+  - name: Extract Education Background
+    messages:
+      - role: assistant
+        content: Please provide the user biography text to extract the education background and degree.
+      - role: user
+        content: I am Alice Johnson. I graduated from Stanford University with a Bachelor's degree in Computer Science in 2015. Later, I obtained my Master's degree from MIT in 2018.
+    result:
+      name: extract_education_info
+      arguments:
+        education:
+          - institution: Stanford University
+            degree: Bachelor's
+            field: Computer Science
+            year: 2015
+          - institution: MIT
+            degree: Master's
+            field: Computer Science
+            year: 2018
+  - name: Extract Education Background
+    messages:
+      - role: assistant
+        content: Please provide the user biography text to extract the education background and degree.
+      - role: user
+        content: Hi, I'm Robert Lee. I received my Bachelor's degree in Mechanical Engineering from UC Berkeley in 2010 and my PhD from Caltech in 2015.
+    result:
+      name: extract_education_info
+      arguments:
+        education:
+          - institution: UC Berkeley
+            degree: Bachelor's
+            field: Mechanical Engineering
+            year: 2010
+          - institution: Caltech
+            degree: PhD
+            field: Mechanical Engineering
+            year: 2015
+tools:
+  - type: function
+    function:
+      name: extract_education_info
+      description: Extracts user education background and degrees from text
+      parameters:
+        type: object
+        properties:
+          education:
+            type: array
+            items:
+              type: object
+              properties:
+                institution:
+                  type: string
+                  description: The institution where the degree was obtained
+                degree:
+                  type: string
+                  enum: ["Bachelor's", "Master's", "PhD", "MBA"]
+                  description: The degree obtained
+                field:
+                  type: string
+                  description: The field of study, if not specified, students are usually studying the same major.
+                year:
+                  type: integer
+                  description: The year the degree was obtained
+              required:
+                - institution
+                - degree
+                - field
+                - year
+            description: The education background of the user
+        required:
+          - education
+round: 4

@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
 	} else {
 		return {
 			ssr: {
-				external: ['openai'],
+				external: ['openai', 'highlight.js'],
 			},
 			define: {
 				exports: {},
