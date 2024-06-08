@@ -21,18 +21,18 @@ suites:
       - role: user
         content: I want to know the price of Apple.
     result:
-      name: get_stock_price
-      arguments:
-        symbol: AAPL
+      - name: get_stock_price
+        arguments:
+          symbol: AAPL
   - messages:
       - role: assistant
         content: Please provide the stock symbol to get the price.
       - role: user
         content: Can you get me the price of Tesla?
     result:
-      name: get_stock_price
-      arguments:
-        symbol: TSLA
+      - name: get_stock_price
+        arguments:
+          symbol: TSLA
 tools:
   - type: function
     function:

@@ -76,7 +76,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -94,8 +94,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -113,7 +113,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -153,7 +153,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -171,8 +171,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -190,7 +190,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -281,7 +281,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -299,8 +299,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -318,7 +318,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -341,7 +341,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -359,8 +359,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -378,7 +378,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -401,7 +401,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -419,8 +419,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -438,7 +438,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -461,7 +461,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -479,8 +479,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -498,7 +498,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -521,7 +521,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -539,8 +539,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -558,7 +558,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -615,7 +615,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -633,8 +633,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -652,7 +652,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -709,7 +709,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -727,8 +727,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -746,7 +746,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -769,7 +769,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -787,8 +787,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -806,7 +806,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -863,7 +863,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -881,8 +881,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -900,7 +900,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -940,7 +940,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -958,8 +958,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -977,7 +977,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -1000,7 +1000,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -1018,8 +1018,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -1037,7 +1037,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },
@@ -1060,7 +1060,7 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -1078,8 +1078,8 @@
               }
             ]
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "extract_education_info",
           "arguments": {
             "education": [
@@ -1097,7 +1097,7 @@
               }
             ]
           }
-        },
+        }],
         "operator": "deepEqual"
       }
     },

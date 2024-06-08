@@ -263,18 +263,18 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "Tesla"
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "TSLA"
           }
-        },
+        }],
         "operator": "deepStrictEqual"
       }
     },
@@ -297,18 +297,18 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "Tesla"
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "TSLA"
           }
-        },
+        }],
         "operator": "deepStrictEqual"
       }
     },
@@ -331,18 +331,18 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "Tesla"
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "get_stock_price",
           "arguments": {
             "symbol": "TSLA"
           }
-        },
+        }],
         "operator": "deepStrictEqual"
       }
     },

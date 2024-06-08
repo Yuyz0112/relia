@@ -11,9 +11,9 @@ suites:
       - role: user
         content: I want to know the price of an apple phone?
     result:
-      name: get_product_price
-      arguments:
-        product_name: iPhone
+      - name: get_product_price
+        arguments:
+          product_name: iPhone
   - name: With System Prompt
     messages:
       - role: system
@@ -23,9 +23,9 @@ suites:
       - role: user
         content: I want to know the price of an apple phone?
     result:
-      name: get_product_price
-      arguments:
-        product_name: iPhone
+      - name: get_product_price
+        arguments:
+          product_name: iPhone
 tools:
   - type: function
     function:

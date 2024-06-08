@@ -43,10 +43,10 @@ export async function runTests(testPlan: TestPlan) {
               const { tool_calls } = chatCompletion.choices[0].message;
               ok(tool_calls?.length, `have tool calls`);
               deepEqual(
-                {
-                  name: tool_calls![0].function.name,
-                  arguments: JSON.parse(tool_calls![0].function.arguments),
-                },
+                tool_calls.map((c) => ({
+                  name: c.function.name,
+                  arguments: JSON.parse(c.function.arguments),
+                })),
                 suite.result
               );
             },

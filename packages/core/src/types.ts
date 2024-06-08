@@ -26,7 +26,7 @@ export type OpenAICompatibleSuite = {
   result: {
     name: string;
     arguments: unknown;
-  };
+  }[];
 };
 
 export type Tool = OpenAI.ChatCompletionTool;

@@ -23,17 +23,17 @@ suites:
       - role: user
         content: I am Alice Johnson. I graduated from Stanford University with a Bachelor's degree in Computer Science in 2015. Later, I obtained my Master's degree from MIT in 2018.
     result:
-      name: extract_education_info
-      arguments:
-        education:
-          - institution: Stanford University
-            degree: Bachelor's
-            field: Computer Science
-            year: 2015
-          - institution: MIT
-            degree: Master's
-            field: Computer Science
-            year: 2018
+      - name: extract_education_info
+        arguments:
+          education:
+            - institution: Stanford University
+              degree: Bachelor's
+              field: Computer Science
+              year: 2015
+            - institution: MIT
+              degree: Master's
+              field: Computer Science
+              year: 2018
   - name: Extract Education Background
     messages:
       - role: assistant
@@ -41,17 +41,17 @@ suites:
       - role: user
         content: Hi, I'm Robert Lee. I received my Bachelor's degree in Mechanical Engineering from UC Berkeley in 2010 and my PhD from Caltech in 2015.
     result:
-      name: extract_education_info
-      arguments:
-        education:
-          - institution: UC Berkeley
-            degree: Bachelor's
-            field: Mechanical Engineering
-            year: 2010
-          - institution: Caltech
-            degree: PhD
-            field: Mechanical Engineering
-            year: 2015
+      - name: extract_education_info
+        arguments:
+          education:
+            - institution: UC Berkeley
+              degree: Bachelor's
+              field: Mechanical Engineering
+              year: 2010
+            - institution: Caltech
+              degree: PhD
+              field: Mechanical Engineering
+              year: 2015
 tools:
   - type: function
     function:

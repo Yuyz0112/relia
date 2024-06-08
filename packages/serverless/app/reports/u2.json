@@ -8,18 +8,18 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "get_product_price",
           "arguments": {
             "product_name": "apple phone"
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "get_product_price",
           "arguments": {
             "product_name": "iPhone"
           }
-        },
+        }],
         "operator": "deepStrictEqual"
       }
     },
@@ -42,18 +42,18 @@
       "error": {
         "generatedMessage": true,
         "code": "ERR_ASSERTION",
-        "actual": {
+        "actual": [{
           "name": "get_product_price",
           "arguments": {
             "product_name": "Apple Phone"
           }
-        },
-        "expected": {
+        }],
+        "expected": [{
           "name": "get_product_price",
           "arguments": {
             "product_name": "iPhone"
           }
-        },
+        }],
         "operator": "deepStrictEqual"
       }
     },
