@@ -72,7 +72,9 @@ export default function CreateForm() {
 				<br />
 				Or you can create your own test plan by filling the textarea below.&nbsp;
 				<em>
-					<a>How to plan a test?</a>
+					<a href="https://github.com/Yuyz0112/relia/blob/main/docs/guide.en-US.md" target="_blank">
+						How to plan a test?
+					</a>
 				</em>
 				.
 			</blockquote>

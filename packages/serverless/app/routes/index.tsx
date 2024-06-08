@@ -38,7 +38,7 @@ export default createRoute(async (c) => {
 			</p>
 			<h3>Use Cases</h3>
 			<h4>Selecting the Most Suitable LLM</h4>
-			<p>Relia helps you identify the best LLM for your specific use case, ensuring high performance and cost efficiency.</p>
+			<p>Identify the best LLM for your specific use case, ensuring high performance and cost efficiency.</p>
 			<blockquote>
 				<em>
 					This test plan compares the success rates of three LLMs (OpenAI, Fireworks, and Groq) to identify the most accurate and efficient
@@ -56,7 +56,10 @@ export default createRoute(async (c) => {
 			/>
 			<hr />
 			<h4>Optimizing Prompts</h4>
-			<p>Optimize prompts and compare results on the same model to enhance performance with Relia.</p>
+			<p>
+				Compare the results of multiple sets of prompts on the same model to understand the impact of different prompts and complete
+				optimization.
+			</p>
 			<blockquote>
 				<em>This test plan aims to compare the effectiveness of different prompt engineering strategies.</em>
 			</blockquote>
@@ -71,7 +74,7 @@ export default createRoute(async (c) => {
 			/>
 			<hr />
 			<h4>Continuous Testing to Prevent Regressions</h4>
-			<p>Continuously test different versions of the same model to avoid regressions during upgrades with Relia.</p>
+			<p>Continuously test different versions of the same model to avoid regressions during upgrades.</p>
 			<blockquote>
 				<em>
 					This test plan aims to prevent regression in model upgrades by comparing the performance of multiple versions of OpenAI's GPT-4

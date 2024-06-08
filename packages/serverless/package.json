@@ -8,11 +8,7 @@
     "build": "vite build --mode client && vite build",
     "preview": "wrangler pages dev",
     "deploy": "npm run build && wrangler pages deploy",
-    "workers:deploy": "wrangler deploy",
-    "workers:dev": "wrangler dev",
-    "workers:start": "wrangler dev",
-    "workers:test": "vitest",
-    "workers:typegen": "wrangler types"
+    "wrangler": "wrangler"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.1.0",

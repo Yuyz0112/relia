@@ -12,23 +12,23 @@ Built specifically for function calling (or "tool use") scenarios, which are at 
 
 [Usage Guide](./docs/guide.en-US.md)
 
-[Self-Deployment]()
+[Self-Deployment](./docs/deployment.en-US.md)
 
-[How to Contribute]()
+[How to Contribute](./docs/contributing.en-US.md)
 
 ## Use Cases
 
 ### Selecting the Most Suitable LLM
 
-Relia helps you identify the best LLM for your specific use case, ensuring high performance and cost efficiency.
+Identify the best LLM for your specific use case, ensuring high performance and cost efficiency.
 
 ### Optimizing Prompts
 
-Optimize prompts and compare results on the same model to enhance performance with Relia.
+Compare the results of multiple sets of prompts on the same model to understand the impact of different prompts and complete optimization.
 
 ### Continuous Testing to Prevent Regressions
 
-Continuously test different versions of the same model to avoid regressions during upgrades with Relia.
+Continuously test different versions of the same model to avoid regressions during upgrades.
 
 ## Roadmap
 
@@ -38,3 +38,5 @@ Continuously test different versions of the same model to avoid regressions duri
 - [ ] Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.
 - [ ] Implement persistent storage for test plans and reports.
 - [ ] Allow custom scoring for different suites to better evaluate and compare the performance of test cases.
+
+Feel free to follow our project on [GitHub](https://github.com/Yuyz0112/relia), [X](https://x.com/Aryu0112), and [Bilibili](https://space.bilibili.com/489667127).
