@@ -1,6 +1,6 @@
 # Relia
 
-[试用 Relia]()。
+[立刻试用](https://relia.dev/)
 
 Relia 是一个针对 LLM 的 E2E 测试框架，帮助您构建适合特定使用场景的 AI 基准测试。
 
