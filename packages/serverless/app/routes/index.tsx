@@ -29,7 +29,8 @@ export default createRoute(async (c) => {
 			<p>
 				Relia is an E2E testing framework for LLMs, designed to help you build AI benchmarks tailored to your specific use cases. It
 				identifies the most suitable LLM model for your needs and ensures that model upgrades do not cause performance regressions through
-				continuous testing.
+				continuous testing. Built specifically for function calling (or "tool use") scenarios, which are at the core of agent-based AI
+				applications.
 				<br />
 				<a class={cx('btn btn-default', tryBtn)} href="/reports/create">
 					Try now
@@ -38,6 +39,12 @@ export default createRoute(async (c) => {
 			<h3>Use Cases</h3>
 			<h4>Selecting the Most Suitable LLM</h4>
 			<p>Relia helps you identify the best LLM for your specific use case, ensuring high performance and cost efficiency.</p>
+			<blockquote>
+				<em>
+					This test plan compares the success rates of three LLMs (OpenAI, Fireworks, and Groq) to identify the most accurate and efficient
+					model for a specific task.
+				</em>
+			</blockquote>
 			<UseCase
 				plan={
 					hljs.highlight(p1, {
@@ -50,6 +57,9 @@ export default createRoute(async (c) => {
 			<hr />
 			<h4>Optimizing Prompts</h4>
 			<p>Optimize prompts and compare results on the same model to enhance performance with Relia.</p>
+			<blockquote>
+				<em>This test plan aims to compare the effectiveness of different prompt engineering strategies.</em>
+			</blockquote>
 			<UseCase
 				plan={
 					hljs.highlight(p2, {
@@ -62,6 +72,12 @@ export default createRoute(async (c) => {
 			<hr />
 			<h4>Continuous Testing to Prevent Regressions</h4>
 			<p>Continuously test different versions of the same model to avoid regressions during upgrades with Relia.</p>
+			<blockquote>
+				<em>
+					This test plan aims to prevent regression in model upgrades by comparing the performance of multiple versions of OpenAI's GPT-4
+					models.
+				</em>
+			</blockquote>
 			<UseCase
 				plan={
 					hljs.highlight(p3, {
@@ -78,6 +94,7 @@ export default createRoute(async (c) => {
 				<li>Expand support to include more LLM providers.</li>
 				<li>Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.</li>
 				<li>Implement persistent storage for test plans and reports.</li>
+				<li>Allow custom scoring for different suites to better evaluate and compare the performance of test cases.</li>
 			</ul>
 			<hr />
 			<p>
@@ -97,7 +114,7 @@ export default createRoute(async (c) => {
 			</p>
 		</div>,
 		{
-			title: 'Relia!',
+			title: 'Relia: Find the Best LLM for Your Needs.',
 		}
 	);
 });

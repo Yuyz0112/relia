@@ -1,5 +1,10 @@
 import type { ITestEndMessage, TestPlan } from '@relia/core';
 import ErrorText from './ErrorText';
+import { css } from 'hono/css';
+
+const tableStyle = css`
+	background-color: var(--background-color);
+`;
 
 export type Props = { messages: ITestEndMessage[]; reportId?: string };
 
@@ -7,7 +12,7 @@ export default function ReportTable({ messages, reportId = 'default' }: Props) {
 	const group = groupByProvider(messages);
 
 	return (
-		<table>
+		<table class={tableStyle}>
 			<thead>
 				<tr>
 					<th>Model</th>
