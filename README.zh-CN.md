@@ -6,7 +6,7 @@ Relia 是一个针对 LLM 的 E2E 测试框架，帮助您构建适合特定使�
 
 它可以识别最适合您的 LLM 模型，并通过持续测试确保模型升级不会导致性能回退。
 
-Relia 专门为 function calling（或“tool use”）场景设计，这也是是代理类 AI 应用程序的核心能力。
+Relia 专门为 function calling（或“tool use”）场景设计，这也是代理类 AI 应用程序的核心能力。
 
 ## 文档
 

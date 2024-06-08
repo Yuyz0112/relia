@@ -21,6 +21,11 @@ export default function Navigation() {
 						</a>
 					</li>
 					<li>
+						<a class="menu-item" href="https://github.com/Yuyz0112/relia/blob/main/docs/guide.en-US.md" target="_blank">
+							Guide
+						</a>
+					</li>
+					<li>
 						<a class="menu-item" href="https://github.com/Yuyz0112/relia" target="_blank">
 							Github
 						</a>
