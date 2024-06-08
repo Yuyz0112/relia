@@ -1,6 +1,8 @@
 # Relia
 
-[Try Relia]().
+[Try Relia](https://relia.dev/)
+
+[中文文档](./README.zh-CN.md)
 
 Relia is an E2E testing framework for LLMs, designed to help you build AI benchmarks tailored to your specific use cases.
 

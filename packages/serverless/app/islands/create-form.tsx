@@ -85,7 +85,7 @@ export default function CreateForm() {
 				<legend>create test report</legend>
 
 				<div class="form-group">
-					<label for="textarea">test plan</label>
+					<label for="textarea">test plan:</label>
 					<textarea
 						cols={30}
 						rows={15}
