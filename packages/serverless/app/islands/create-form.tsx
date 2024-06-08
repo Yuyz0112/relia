@@ -70,13 +70,17 @@ export default function CreateForm() {
 					try example plan template
 				</button>
 				<br />
-				Or you can create your own test plan by filling the textarea below.
+				Or you can create your own test plan by filling the textarea below.&nbsp;
+				<em>
+					<a>How to plan a test?</a>
+				</em>
+				.
 			</blockquote>
 
 			<hr />
 
 			<fieldset>
-				<legend>create test plan</legend>
+				<legend>create test report</legend>
 
 				<div class="form-group">
 					<label for="textarea">test plan</label>

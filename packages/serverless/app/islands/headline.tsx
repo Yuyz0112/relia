@@ -48,7 +48,7 @@ export default function Headline() {
 				setRound((round) => round + 1);
 				setIndex(0);
 				setDisplayedText('');
-			}, 3_000);
+			}, 5_000);
 		}
 
 		return () => timer && clearInterval(timer);
