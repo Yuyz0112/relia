@@ -1,7 +1,8 @@
 import type { ITestEndMessage, TestMessage } from '@relia/core';
 import { useState } from 'hono/jsx';
-import ReportTable from '../components/ReportTable';
 import { css, cx } from 'hono/css';
+import ReportTable from '../components/ReportTable';
+import PlanEditor from '../components/PlanEditor';
 import basicYaml from '../../../../examples/basic.yaml?raw';
 import exampleResult from '../reports/example.json';
 
@@ -83,9 +84,10 @@ export default function CreateForm() {
 
 			<fieldset>
 				<legend>create test report</legend>
+				<PlanEditor yamlPlan={basicYaml} />
 
-				<div class="form-group">
-					<label for="textarea">test plan:</label>
+				{/* <div class="form-group">
+					<label for="textarea">test plan</label>
 					<textarea
 						cols={30}
 						rows={15}
@@ -94,7 +96,7 @@ export default function CreateForm() {
 						value={yamlPlan}
 						onChange={(evt) => setYamlPlan((evt.currentTarget as HTMLTextAreaElement).value)}
 					/>
-				</div>
+				</div> */}
 
 				<div class="form-group flex justify-end">
 					<button

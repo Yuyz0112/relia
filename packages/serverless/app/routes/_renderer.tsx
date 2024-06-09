@@ -37,6 +37,10 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 						text-decoration: line-through;
 					}
 
+					textarea {
+						resize: vertical;
+					}
+
 					.error-info {
 						display: none;
 						white-space: pre-wrap;
