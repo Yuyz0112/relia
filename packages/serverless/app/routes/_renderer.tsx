@@ -10,7 +10,7 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 				<meta charset="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{title ? <title>{title}</title> : <></>}
-				<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+				<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.5/dist/terminal.min.css" />
 				<Style>{css`
 					body {
 						background-color: rgba(245, 245, 245, 0.6);

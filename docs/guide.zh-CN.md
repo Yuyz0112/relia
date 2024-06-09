@@ -40,9 +40,7 @@ tools 用于描述被测试的 function/tool，本身为与 OpenAI 兼容的 too
 
 ### 通过 API 执行测试计划
 
-- API endpoint: `/api/reports`
-- method: `POST`
-- request body: `{ yamlPlan: string }`
+To be update.
 
 ## API key 安全性
 

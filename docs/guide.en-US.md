@@ -40,9 +40,7 @@ Visit the Relia service at the `/reports/create` route. Fill in the YAML format 
 
 ### Running the Test Plan via API
 
-- API endpoint: `/api/reports`
-- Method: `POST`
-- Request body: `{ yamlPlan: string }`
+To be update.
 
 ## API Key Security
 
