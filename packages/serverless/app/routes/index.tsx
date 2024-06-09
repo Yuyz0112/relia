@@ -10,6 +10,7 @@ import p2 from '../../../../examples/optimize-prompts.yaml?raw';
 import u2 from '../reports/u2.json';
 import p3 from '../../../../examples/continuous-testing.yaml?raw';
 import u3 from '../reports/u3.json';
+import Roadmap from '../components/Roadmap';
 
 hljs.registerLanguage('yaml', yaml);
 
@@ -91,14 +92,7 @@ export default createRoute(async (c) => {
 				reportId="u3"
 			/>
 			<h3>Roadmap</h3>
-			<ul>
-				<li>Enable customization of provider titles and suite titles in test reports for better organization and clarity.</li>
-				<li>Improve the efficiency and reliability of executing large-scale test plans.</li>
-				<li>Expand support to include more LLM providers.</li>
-				<li>Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.</li>
-				<li>Implement persistent storage for test plans and reports.</li>
-				<li>Allow custom scoring for different suites to better evaluate and compare the performance of test cases.</li>
-			</ul>
+			<Roadmap />
 			<hr />
 			<p>
 				Feel free to follow our project on&nbsp;

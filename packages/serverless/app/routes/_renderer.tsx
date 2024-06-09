@@ -24,6 +24,19 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 						max-width: 80rem;
 					}
 
+					.terminal-card > header {
+						display: none;
+					}
+					.terminal-timeline .terminal-card::before {
+						margin-top: 11px;
+					}
+					.terminal-card.done::before {
+						background: var(--font-color);
+					}
+					.terminal-card.done > div {
+						text-decoration: line-through;
+					}
+
 					.error-info {
 						display: none;
 						white-space: pre-wrap;
