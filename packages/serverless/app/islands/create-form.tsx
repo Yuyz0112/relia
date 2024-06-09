@@ -1,13 +1,18 @@
 import type { ITestEndMessage, TestMessage } from '@relia/core';
 import { useState } from 'hono/jsx';
-import ReportTable from '../components/ReportTable';
 import { css, cx } from 'hono/css';
+import ReportTable from '../components/ReportTable';
+import PlanEditor from '../components/PlanEditor';
 import basicYaml from '../../../../examples/basic.yaml?raw';
 import exampleResult from '../reports/example.json';
 
-const tryBtn = css`
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+const FormStyle = css`
+	margin-bottom: 1em;
+`;
+
+const TryBtn = css`
+	margin-top: 1em;
+	margin-bottom: 1em;
 `;
 
 export default function CreateForm() {
@@ -26,7 +31,7 @@ export default function CreateForm() {
 				return;
 			}
 
-			const response = await fetch('/api/reports', {
+			const response = await fetch('/api/v0/reports', {
 				method: 'POST',
 				body: JSON.stringify({ yamlPlan }),
 			});
@@ -42,7 +47,7 @@ export default function CreateForm() {
 		return (
 			<div>
 				<button
-					class={cx('btn btn-default btn-ghost', tryBtn)}
+					class={cx('btn btn-default btn-ghost', TryBtn)}
 					onClick={() => {
 						setMessages(null);
 					}}
@@ -55,14 +60,14 @@ export default function CreateForm() {
 	}
 
 	return (
-		<form onSubmit={(e) => e.preventDefault()}>
+		<form onSubmit={(e) => e.preventDefault()} class={FormStyle}>
 			<blockquote>
 				You can try the example plan by clicking the button below.
 				<br />
 				Once you submit the example plan, it will display a previous recorded test result.
 				<br />
 				<button
-					class={cx('btn btn-default btn-ghost', tryBtn)}
+					class={cx('btn btn-default btn-ghost', TryBtn)}
 					onClick={() => {
 						setYamlPlan(basicYaml);
 					}}
@@ -83,18 +88,12 @@ export default function CreateForm() {
 
 			<fieldset>
 				<legend>create test report</legend>
-
-				<div class="form-group">
-					<label for="textarea">test plan:</label>
-					<textarea
-						cols={30}
-						rows={15}
-						name="yamlPlan"
-						placeholder="YAML format test plan"
-						value={yamlPlan}
-						onChange={(evt) => setYamlPlan((evt.currentTarget as HTMLTextAreaElement).value)}
-					/>
-				</div>
+				<PlanEditor
+					value={basicYaml}
+					onChange={(value) => {
+						setYamlPlan(value);
+					}}
+				/>
 
 				<div class="form-group flex justify-end">
 					<button
