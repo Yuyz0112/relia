@@ -5,7 +5,7 @@ export default function Roadmap() {
 				<header>core API</header>
 				<div>Expand support to include more LLM providers.</div>
 			</div>
-			<div class="terminal-card">
+			<div class="terminal-card done">
 				<header>UI/UX</header>
 				<div>Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.</div>
 			</div>

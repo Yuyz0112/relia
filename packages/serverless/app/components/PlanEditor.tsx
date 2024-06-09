@@ -1,6 +1,6 @@
 import type { TestPlan } from '@relia/core';
 import { css, cx } from 'hono/css';
-import { useEffect, useState } from 'hono/jsx';
+import { useEffect, useMemo, useState } from 'hono/jsx';
 import { dump, load } from 'js-yaml';
 import YamlEditor from './YamlEditor';
 
@@ -78,8 +78,11 @@ const YamlSwitch = css`
 `;
 
 const TestPlanEditor = ({ value, onChange }: Props) => {
-	const [testPlan, setTestPlan] = useState<TestPlan>(() => {
+	const testPlan = useMemo(() => {
 		try {
+			if (!value) {
+				throw new Error('empty');
+			}
 			return load(value) as TestPlan;
 		} catch {
 			return {
@@ -89,11 +92,10 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 				round: 1,
 			};
 		}
-	});
+	}, [value]);
+	const setTestPlan = (newValue: unknown) => onChange(dump(newValue));
+
 	const [yamlMode, setYamlMode] = useState(false);
-	useEffect(() => {
-		onChange(dump(testPlan));
-	}, [testPlan]);
 
 	const handleUpdateValue = (newValue: unknown, path: Path) => {
 		const newTestPlan = { ...testPlan };
