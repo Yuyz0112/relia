@@ -125,10 +125,10 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 		handleUpdateValue(newValue, path);
 	};
 
-	const renderInput = (label: string, value: string, path: Path) => (
+	const renderInput = (label: string, value: string, path: Path, type = 'text') => (
 		<div class="form-group">
 			<label>{label}:</label>
-			<input type="text" value={value} onChange={(e) => handleInputChange(e, path)} />
+			<input type={type} value={value} onChange={(e) => handleInputChange(e, path)} />
 		</div>
 	);
 
@@ -148,7 +148,7 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 			{renderInput('name', provider.name, ['providers', index, 'name'])}
 			{renderInput('model', provider.model, ['providers', index, 'model'])}
 			{renderInput('base URL', provider.baseURL, ['providers', index, 'baseURL'])}
-			{renderInput('API Key', provider.apiKey, ['providers', index, 'apiKey'])}
+			{renderInput('API Key', provider.apiKey, ['providers', index, 'apiKey'], 'password')}
 		</fieldset>
 	);
 
