@@ -61,7 +61,7 @@ export default function CreateForm() {
 
 	return (
 		<form onSubmit={(e) => e.preventDefault()} class={FormStyle}>
-			<blockquote>
+			<div>
 				You can try the example plan by clicking the button below.
 				<br />
 				Once you submit the example plan, it will display a previous recorded test result.
@@ -75,14 +75,14 @@ export default function CreateForm() {
 					try example plan template
 				</button>
 				<br />
-				Or you can create your own test plan by filling the textarea below.&nbsp;
+				Or you can create your own test plan by filling the form below.&nbsp;
 				<em>
 					<a href="https://github.com/Yuyz0112/relia/blob/main/docs/guide.en-US.md" target="_blank">
 						How to plan a test?
 					</a>
 				</em>
 				.
-			</blockquote>
+			</div>
 
 			<hr />
 

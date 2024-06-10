@@ -22,15 +22,15 @@ Built specifically for function calling (or "tool use") scenarios, which are at 
 
 ### Selecting the Most Suitable LLM
 
-Identify the best LLM for your specific use case, ensuring high performance and cost efficiency.
+When selecting models, identify the best LLM for your specific use case, ensuring high performance and cost efficiency.
 
 ### Optimizing Prompts
 
-Compare the results of multiple sets of prompts on the same model to understand the impact of different prompts and complete optimization.
+When developing an application, compare the results of multiple sets of prompts on the same model to understand the impact of different prompts and complete optimization.
 
 ### Continuous Testing to Prevent Regressions
 
-Continuously test different versions of the same model to avoid regressions during upgrades.
+After the application is released, continuously test different versions of the same model to avoid regressions during upgrades.
 
 ## Roadmap
 
