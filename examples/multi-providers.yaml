@@ -46,4 +46,4 @@ tools:
             description: The stock symbol to get the price for
         required:
           - symbol
-round: 2
+round: 3

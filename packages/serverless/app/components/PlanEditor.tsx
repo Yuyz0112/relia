@@ -1,6 +1,6 @@
 import type { TestPlan } from '@relia/core';
 import { css, cx } from 'hono/css';
-import { useEffect, useMemo, useState } from 'hono/jsx';
+import { useMemo, useState } from 'hono/jsx';
 import { dump, load } from 'js-yaml';
 import YamlEditor from './YamlEditor';
 
@@ -15,6 +15,7 @@ const PlanEditorStyle = css`
 
 		margin: calc(var(--global-space) * 2) 0;
 		text-align: center;
+		color: var(--secondary-color);
 	}
 
 	.form-group {
@@ -62,6 +63,16 @@ const RemoveButton = cx(
 		top: -0.5em;
 		right: 2px;
 		padding: 0.25em 0.5em;
+		border: none;
+	`
+);
+
+const InlineRemoveButton = cx(
+	RemoveButton,
+	css`
+		position: static;
+		top: initial;
+		right: initial;
 	`
 );
 
@@ -131,7 +142,7 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 					handleUpdateValue(newProviders, ['providers']);
 				}}
 			>
-				x
+				[x]
 			</button>
 			<legend>provider {index + 1}</legend>
 			{renderInput('name', provider.name, ['providers', index, 'name'])}
@@ -151,10 +162,10 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 					handleUpdateValue(newResults, ['suites', suiteIndex, 'result']);
 				}}
 			>
-				x
+				[x]
 			</button>
-			<legend>Result {resultIndex + 1}</legend>
-			{renderInput('name', result.name, ['suites', suiteIndex, 'result', resultIndex, 'name'])}
+			<legend>result {resultIndex + 1}</legend>
+			{renderInput('tool name', result.name, ['suites', suiteIndex, 'result', resultIndex, 'name'])}
 			<div class="form-group">
 				<label>arguments (YAML):</label>
 				<YamlEditor
@@ -175,7 +186,7 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 					handleUpdateValue(newSuites, ['suites']);
 				}}
 			>
-				x
+				[x]
 			</button>
 			<legend>suite {index + 1}</legend>
 			<label>messages:</label>
@@ -196,6 +207,16 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 							value={String(message.content)}
 							onChange={(e) => handleInputChange(e, ['suites', index, 'messages', messageIndex, 'content'])}
 						/>
+						<button
+							class={InlineRemoveButton}
+							onClick={() => {
+								const newMessages = [...testPlan.suites[index].messages];
+								newMessages.splice(messageIndex, 1);
+								handleUpdateValue(newMessages, ['suites', index, 'messages']);
+							}}
+						>
+							[x]
+						</button>
 					</div>
 				);
 			})}
@@ -229,7 +250,7 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 					handleUpdateValue(newTools, ['tools']);
 				}}
 			>
-				x
+				[x]
 			</button>
 			<legend>tool {index + 1}</legend>
 			<div class={TwoColumnFields}>
@@ -286,7 +307,7 @@ const TestPlanEditor = ({ value, onChange }: Props) => {
 					<button
 						class={AddOneButton}
 						onClick={() => {
-							handleUpdateValue([...testPlan.suites, { messages: [], result: [] }], ['suites']);
+							handleUpdateValue([...testPlan.suites, { messages: [{ role: 'user', content: '' }], result: [{ name: '' }] }], ['suites']);
 						}}
 					>
 						add suite

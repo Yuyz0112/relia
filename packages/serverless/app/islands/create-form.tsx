@@ -88,6 +88,7 @@ export default function CreateForm() {
 
 			<fieldset>
 				<legend>create test report</legend>
+
 				<PlanEditor
 					value={yamlPlan}
 					onChange={(value) => {

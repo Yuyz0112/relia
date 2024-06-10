@@ -37,7 +37,7 @@ Continuously test different versions of the same model to avoid regressions duri
 - [ ] Enable customization of provider titles and suite titles in test reports for better organization and clarity.
 - [ ] Improve the efficiency and reliability of executing large-scale test plans.
 - [ ] Expand support to include more LLM providers.
-- [ ] Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.
+- [x] Develop a form UI for editing test plans, making it easier and more intuitive to create and manage tests.
 - [ ] Implement persistent storage for test plans and reports.
 - [ ] Allow custom scoring for different suites to better evaluate and compare the performance of test cases.
 

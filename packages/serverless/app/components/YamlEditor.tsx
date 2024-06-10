@@ -18,7 +18,6 @@ const YamlEditorStyle = css`
 function YamlEditor<T>({ initialValue, onChange, rows = 3, cols = 30 }: YamlEditorProps<T>) {
 	const [value, setValue] = useState(dump(initialValue));
 	const [error, setError] = useState<unknown>(null);
-	console.log(value);
 
 	const handleInputChange = (event: Event) => {
 		const newValue = (event.target as HTMLTextAreaElement).value;
