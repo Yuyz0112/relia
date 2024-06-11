@@ -1,9 +1,13 @@
 import * as Diff from 'diff';
 import { css, cx } from 'hono/css';
+import CircleXIcon from './CircleXIcon';
 
 const errorBtn = css`
-	margin-left: 0.25rem;
-	padding: 0.125rem;
+	padding: 0.125em;
+
+	svg {
+		margin-right: 0.125em;
+	}
 `;
 
 type Props = {
@@ -22,7 +26,7 @@ export default function ErrorText({ error, labelFor }: Props) {
 	if (code !== 'ERR_ASSERTION' || !['deepStrictEqual', 'deepEqual'].includes(operator)) {
 		errorDetail = <pre class="error-info">{JSON.stringify(error, null, 2)}</pre>;
 	} else {
-		const diff = Diff.diffChars(JSON.stringify(actual, null, 2), JSON.stringify(expected, null, 2));
+		const diff = Diff.diffLines(JSON.stringify(expected, null, 2), JSON.stringify(actual, null, 2));
 		errorDetail = (
 			<pre class="error-info">
 				{diff.map((item) => {
@@ -41,7 +45,7 @@ export default function ErrorText({ error, labelFor }: Props) {
 	return (
 		<>
 			<label for={labelFor} class={cx('btn btn-error btn-ghost', errorBtn)}>
-				Show Error
+				<CircleXIcon /> Show Error
 			</label>
 			<input type="checkbox" id={labelFor} class="error-checkbox" />
 			{errorDetail}

@@ -46,6 +46,7 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 						white-space: pre-wrap;
 						margin-top: 4px;
 						padding: 2px;
+						text-align: left;
 					}
 					.error-cell {
 						position: relative;
@@ -62,6 +63,9 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 					.align-right {
 						text-align: right;
 					}
+					.align-center {
+						text-align: center;
+					}
 					.bg-success {
 						background-color: rgb(220 252 231);
 					}
@@ -69,10 +73,12 @@ export default jsxRenderer(({ children, title, ...rest }) => {
 						background-color: rgb(254 226 226);
 					}
 					.bg-diff-add {
-						background-color: rgb(248 113 113);
+						background-color: rgb(220 252 231);
+						color: rgb(20 83 45);
 					}
 					.bg-diff-remove {
-						background-color: rgb(74 222 128);
+						background-color: rgb(254 226 226);
+						color: rgb(127 29 29);
 					}
 					.break-all {
 						word-break: break-all;

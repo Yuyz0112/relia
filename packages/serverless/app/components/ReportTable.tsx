@@ -1,6 +1,7 @@
 import type { ITestEndMessage, TestPlan } from '@relia/core';
 import ErrorText from './ErrorText';
 import { css } from 'hono/css';
+import CircleCheckIcon from './CircleCheckIcon';
 
 const tableStyle = css`
 	background-color: var(--background-color);
@@ -40,9 +41,8 @@ export default function ReportTable({ messages, reportId = 'default' }: Props) {
 								<>
 									<td class="align-right">{round.round}</td>
 									<td class={`${round.pass ? 'bg-success' : 'bg-error'} error-cell`} width={350}>
-										<div>
-											{round.pass ? 'Success' : 'Failure'}
-											<ErrorText error={round.error} labelFor={labelFor} />
+										<div class="align-center">
+											{round.pass ? <CircleCheckIcon /> : <ErrorText error={round.error} labelFor={labelFor} />}
 										</div>
 									</td>
 								</>
