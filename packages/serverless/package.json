@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run build --prefix ../core",
     "build": "vite build --mode client && vite build",
     "preview": "wrangler pages dev",
     "deploy": "npm run build && wrangler pages deploy",
